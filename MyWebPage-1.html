@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>My WebPage-1</title>
+<script src="wiseppt.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<meta name = "viewport" content = "width:device-width, initial-scale = 1">
+<link rel = "stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta name="viewport"content="width=device-width, initial-scale=1">
+ <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+var i = 0;
+var images = [];
+images[0] = "http://media1.santabanta.com/full1/Animals/Dogs/dogs-49h.jpg";
+images[1] = "http://images2.fanpop.com/image/photos/13200000/Cute-Dog-dogs-13286656-1024-768.jpg";
+images[2] = "https://thirdpartypet.com/wp-content/uploads/2016/08/aboutus.jpg";
+images[3] = "https://www.kimballstock.com/pix/PUP/08/PUP_08_RK0304_02_P.JPG";
+ function changeimg() {
+	document.slide.src = images[i];
+	if( i < images.length -1){
+	i++;
+	}else{
+	i = 0;
+	}
+	setTimeout("changeimg()",1000);
+	}
+	window.onload = changeimg;
+</script>
+<style>
+body{
+     background-image:url("https://underwoodfuneralhome.com/wp-content/uploads/2016/10/tropical-mountain-skydsc03155-ws.jpg");
+	 background-repeat:no-repeat center center fixed; 
+	
+}
+#loginform{
+	
+	position:absolute;
+	top:10000%;
+	left:20%;
+	right:50%;
+	bottom:50%;
+	font-size:20px;
+}
+#images{
+	position:absolute;
+	top:100px;
+	left:20%;
+	right:80%;
+	bottom:60%;
+	
+	}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<div class = "row">
+<div class = "col-md-6">
+<div id = "images">
+<img name = "slide"  width = "500" height="400"/>
+</div>
+</div>
+<div class = "col-md-6">
+<div id = "loginform">
+<h2>REGISTER</h2>
+<form name = "login_form"  style = "background-color: transparent" onsubmit ="return validator();">
+<div id="error"> </div>
+<div class="uname">
+Username:<input type ="text" name = "uname" placeholder="Username" />
+</div>
+<div class="email">
+E-mail:<input type = "text"  name = "email" placeholder = "Email"/>
+</br>
+<div class="password">
+Password: <input type ="password" name = "password" placeholder = "Password" />
+<br/>
+<p></p>
+</div>
+<div class="gender">
+       <input type="radio" id="male" name="gender"  value="Male">Male
+       <input type="radio" id="female" name="gender"  value="Female">Female
+       </div>
+<div class="submit">
+<input  type="submit" class="btn btn-primary" value = "Submit"/>
+</div> 
+
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
